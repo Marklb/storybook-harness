@@ -1,5 +1,11 @@
 {
-  "version": "0.0.3",
+  "name": "@marklb/storybook-harness",
+  "version": "0.0.5",
+  "author": "Mark Berry (markberry867@gmail.com)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Marklb/storybook-harness"
+  },
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -7,59 +13,29 @@
     "dist",
     "src"
   ],
-  "engines": {
-    "node": ">=10"
-  },
   "scripts": {
-    "start": "tsdx watch",
-    "build": "tsdx build",
-    "test": "tsdx test",
-    "lint": "tsdx lint",
-    "prepare": "tsdx build",
-    "size": "size-limit",
-    "analyze": "size-limit --why"
+    "build": "ng-packagr -p ./package.json"
+  },
+  "devDependencies": {
+    "tslib": "^2.3.1",
+    "typescript": "4.2.4",
+    "@angular/cdk": "^12.0.5",
+    "@storybook/instrumenter": "^6.4.0",
+    "@angular/core": "~12.0.5",
+    "@angular/compiler-cli": "~12.0.5",
+    "@angular/compiler": "~12.0.5",
+    "ng-packagr": "^12.0.5"
   },
   "peerDependencies": {
     "@angular/cdk": ">=8.0.0",
     "@storybook/instrumenter": ">=6.4.0"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "tsdx lint"
-    }
-  },
-  "prettier": {
-    "printWidth": 80,
-    "semi": true,
-    "singleQuote": true,
-    "trailingComma": "es5"
-  },
-  "name": "@marklb/storybook-harness",
-  "author": "Mark Berry (markberry867@gmail.com)",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/storybookjs/testing-angular"
-  },
-  "module": "dist/storybook-harness.esm.js",
-  "size-limit": [
-    {
-      "path": "dist/storybook-harness.cjs.production.min.js",
-      "limit": "10 KB"
+  "ngPackage": {
+    "lib": {
+      "entryFile": "./public_api.ts"
     },
-    {
-      "path": "dist/storybook-harness.esm.js",
-      "limit": "10 KB"
-    }
-  ],
-  "devDependencies": {
-    "@size-limit/preset-small-lib": "^7.0.3",
-    "husky": "^7.0.4",
-    "size-limit": "^7.0.3",
-    "tsdx": "^0.14.1",
-    "tslib": "^2.3.1",
-    "typescript": "^4.5.2",
-    "@angular/cdk": "^13.0.2",
-    "@storybook/instrumenter": "^6.4.0"
+    "deleteDestPath": true,
+    "dest": "./dist"
   },
   "publishConfig": {
     "access": "public"
