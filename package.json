@@ -1,6 +1,6 @@
 {
   "name": "@marklb/storybook-harness",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "author": "Mark Berry (markberry867@gmail.com)",
   "repository": {
     "type": "git",
@@ -9,10 +9,6 @@
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
-  "files": [
-    "dist",
-    "src"
-  ],
   "scripts": {
     "build": "ng-packagr -p ./package.json"
   },
