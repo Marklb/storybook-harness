@@ -1,6 +1,6 @@
 {
   "name": "@marklb/storybook-harness",
-  "version": "0.0.6",
+  "version": "1.0.0",
   "author": "Mark Berry (markberry867@gmail.com)",
   "repository": {
     "type": "git",
@@ -10,21 +10,21 @@
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "scripts": {
-    "build": "ng-packagr -p ./package.json"
+    "build": "ng-packagr -p ./ng-package.json"
   },
   "devDependencies": {
     "tslib": "^2.3.1",
-    "typescript": "4.2.4",
-    "@angular/cdk": "^12.0.5",
-    "@storybook/instrumenter": "^6.4.0",
-    "@angular/core": "~12.0.5",
-    "@angular/compiler-cli": "~12.0.5",
-    "@angular/compiler": "~12.0.5",
-    "ng-packagr": "^12.0.5"
+    "typescript": "5.9.2",
+    "@angular/cdk": "^20.2.3",
+    "storybook": "^9.1.6",
+    "@angular/core": "^20.3.0",
+    "@angular/compiler-cli": "^20.3.0",
+    "@angular/compiler": "^20.3.0",
+    "ng-packagr": "^20.3.0"
   },
   "peerDependencies": {
-    "@angular/cdk": ">=8.0.0",
-    "@storybook/instrumenter": ">=6.4.0"
+    "@angular/cdk": ">=19.0.0",
+    "storybook": ">=9.0.0"
   },
   "ngPackage": {
     "lib": {

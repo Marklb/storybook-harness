@@ -1,4 +1,4 @@
-import { instrument } from '@storybook/instrumenter'
+import { instrument } from 'storybook/internal/instrumenter'
 
 function decorateHarnessFn(fn: ((...args: any) => Promise<any>), instrumentedFn: any) {
   return function(this: any, ...args: any[]) {
